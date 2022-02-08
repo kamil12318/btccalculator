@@ -3,4 +3,9 @@
     <string name="cv_krypto">Kryptowaluty</string>
     <string name="cv_klasyczne">Waluty Klasyczne</string>
     <string name="cv_credits">O autorze</string>
+    <string name="credits">Kamil Pawlos w64883 <br></br><br></br>
+        Projekt programowanie obiektowe <br></br><br></br>
+        Temat: Aplikajca do przeliczania walut i kryptowalut.
+    </string>
+    <string name="back">Powrót</string>
 </resources>

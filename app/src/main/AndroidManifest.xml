@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Btccalculator">
         <activity
+            android:name=".kalklasyczne"
+            android:exported="false" />
+        <activity
+            android:name=".creddits"
+            android:exported="false" />
+        <activity
+            android:name=".kalkulator"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
