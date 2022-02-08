@@ -6,9 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/cVkrypto"
-        android:layout_width="409dp"
+        android:layout_width="match_parent"
         android:layout_height="180dp"
         android:layout_marginTop="10dp"
         app:circularflow_radiusInDP="10dp"
@@ -16,7 +16,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.107">
+        app:layout_constraintVertical_bias="0.107"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        app:cardCornerRadius="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardElevation="5dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -35,16 +41,19 @@
 
 
         </RelativeLayout>
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/cVklasyczne"
-        android:layout_width="409dp"
+        android:layout_width="match_parent"
         android:layout_height="180dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        app:cardCornerRadius="10dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -62,18 +71,21 @@
             </TextView>
 
         </RelativeLayout>
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/cVcredits"
-        android:layout_width="409dp"
+        android:layout_width="match_parent"
         android:layout_height="180dp"
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cVklasyczne"
-        app:layout_constraintVertical_bias="0.89">
+        app:layout_constraintVertical_bias="0.89"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        app:cardCornerRadius="10dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -90,5 +102,5 @@
             </TextView>
 
         </RelativeLayout>
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
