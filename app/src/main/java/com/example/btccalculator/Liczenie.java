@@ -1,12 +1,17 @@
 package com.example.btccalculator;
 
 public class Liczenie {
-    int dzielna;
-    int dzielnik;
-    int wynik;
+
+    double kurs2;
     double kurs;
-    int waluta;
     int b;
+    double c;
+    float wynik = (float) (c*kurs2);
+
+
+
+
+
 
 
 }
