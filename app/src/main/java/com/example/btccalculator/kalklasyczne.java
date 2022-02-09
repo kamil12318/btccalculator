@@ -1,7 +1,5 @@
 package com.example.btccalculator;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -10,6 +8,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.card.MaterialCardView;
 
@@ -42,7 +42,7 @@ public class kalklasyczne extends AppCompatActivity {
 
         cardViewUSD.setOnClickListener(v -> {
             waluta.kurs = 1.0;
-           Toast.makeText(kalklasyczne.this, "Dolar wybran", Toast.LENGTH_SHORT).show();
+            Toast.makeText(kalklasyczne.this, "Dolar wybran", Toast.LENGTH_SHORT).show();
         });
 
         cardViewGBP.setOnClickListener(v -> {
@@ -103,19 +103,17 @@ public class kalklasyczne extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
-
-
         });
 
     }
 
     public void btnClicked(View view) {
         EditText txtIn = findViewById(R.id.txtIn);
-        String temp=txtIn.getText().toString();
-        if(!"".equals(temp)){
+        String temp = txtIn.getText().toString();
+        if (!"".equals(temp)) {
             waluta.b = Integer.parseInt(temp);
-            waluta.c = (float) ((waluta.b)/waluta.kurs);
-            waluta.wynik = (float) ((waluta.c)*waluta.kurs2);
+            waluta.c = (float) ((waluta.b) / waluta.kurs);
+            waluta.wynik = (float) ((waluta.c) * waluta.kurs2);
 
         }
         TextView txtout = findViewById(R.id.txtout);
