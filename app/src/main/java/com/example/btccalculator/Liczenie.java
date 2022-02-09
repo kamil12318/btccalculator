@@ -6,5 +6,7 @@ public class Liczenie {
     int wynik;
     double kurs;
     int waluta;
+    int b;
+
 
 }

@@ -1,10 +1,12 @@
 package com.example.btccalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -14,40 +16,37 @@ import java.util.ArrayList;
 
 public class kalklasyczne extends AppCompatActivity {
 
-    Liczenie Euro = new Liczenie();
-
-    private MaterialCardView cardViewEUR;
-    private MaterialCardView cardViewSF;
-    private MaterialCardView cardViewUSD;
-    private MaterialCardView cardViewPLN;
-    private MaterialCardView cardViewGBP;
+    Liczenie waluta = new Liczenie();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kalklasyczne);
 
-        cardViewSF = findViewById(R.id.sf);
-        cardViewEUR = findViewById(R.id.cVeur);
+        MaterialCardView cardViewSF = findViewById(R.id.sf);
+        MaterialCardView cardViewEUR = findViewById(R.id.cVeur);
+        MaterialCardView cardViewUSD = findViewById(R.id.cVusd);
+        MaterialCardView cardViewGBP = findViewById(R.id.cVgbp);
+        MaterialCardView cardViewPLN = findViewById(R.id.cVpln);
 
-
-
-        cardViewEUR.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(kalklasyczne.this, "sdfasdfsadfsd", Toast.LENGTH_SHORT).show();
-                Euro.kurs = 0.88;
-            }
+        cardViewEUR.setOnClickListener(v -> {
+            Toast.makeText(kalklasyczne.this, "sdfasdfsadfsd", Toast.LENGTH_SHORT).show();
+            waluta.kurs = 0.88;
         });
 
+        cardViewSF.setOnClickListener(v -> {
+            waluta.kurs = 0.93;
+            Toast.makeText(kalklasyczne.this, waluta.kurs + "", Toast.LENGTH_SHORT).show();
+        });
 
+        cardViewUSD.setOnClickListener(v -> {
+            waluta.kurs = 1.0;
+            Toast.makeText(kalklasyczne.this, waluta.kurs + "", Toast.LENGTH_SHORT).show();
+        });
 
+        cardViewGBP.setOnClickListener(v -> waluta.kurs = 0.74);
 
-
-
-
-
-
+        cardViewPLN.setOnClickListener(v -> waluta.kurs = 3.97);
 
 
         Spinner listawalut = findViewById(R.id.spinner);
@@ -67,12 +66,12 @@ public class kalklasyczne extends AppCompatActivity {
         listawalut.setAdapter(walutyAdapter);
 
 
-        listawalut.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+        listawalut.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                switch((int) position){
+                switch ((int) position) {
                     case 0:
 
                     case 1:
@@ -87,7 +86,11 @@ public class kalklasyczne extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
+
+
         });
+
+
 
 
 
@@ -96,4 +99,14 @@ public class kalklasyczne extends AppCompatActivity {
 
     }
 
+    public void btnClicked(View view) {
+        EditText txtIn = findViewById(R.id.txtIn);
+        String temp=txtIn.getText().toString();
+        if(!"".equals(temp)){
+            waluta.b = Integer.parseInt(temp);
+
+        }
+        Toast.makeText(kalklasyczne.this,  waluta.b +"sfa", Toast.LENGTH_SHORT).show();
+//        co się dzieje po wcisniece przycisku
+    }
 }
