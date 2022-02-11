@@ -46,7 +46,15 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
     }
+    mnozene bb = new mnozene();
+
+    public int add(int a, int b) {
+        return 0;
+    }
+
 
 
 
